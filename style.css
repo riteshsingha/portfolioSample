@@ -30,6 +30,9 @@ section{
     padding: 0 80px;
     margin: auto;
 }
+.contact-form {
+    display: none;
+}
 .about, .services, .skills, .teams, .contact, footer{
     font-family: 'Poppins', sans-serif;
 }
@@ -359,13 +362,13 @@ section .title::after{
     width: 65%;
 }
 .skills-content .right .oracle::before{
-    width: 70%;
-}
-.skills-content .right .html::before{
     width: 60%;
 }
+.skills-content .right .html::before{
+    width: 70%;
+}
 .skills-content .right .css::before{
-    width: 50%;
+    width: 70%;
 }
 /* contact section styling */
 .contact .title::after{

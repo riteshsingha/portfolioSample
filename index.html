@@ -30,11 +30,25 @@
                 <div class="text-1">Hello, my name is</div>
                 <div class="text-2">Ritesh Singha</div>
                 <div class="text-3">And I'm a <span>Software Developer</span></div>
-                <a href="#">Hire me</a>
+                <a onclick="toggleForm()">Hire me</a>
             </div>
         </div>
     </section>
+    <form id="contactForm" class="contact-form">
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" name="firstName" required><br>
 
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" name="lastName" required><br>
+
+        <label for="contactNumber">Contact Number:</label>
+        <input type="tel" id="contactNumber" name="contactNumber" required><br>
+
+        <label for="queries">Queries:</label>
+        <textarea id="queries" name="queries" required></textarea><br>
+
+        <button type="submit">Submit</button>
+    </form>
     <!-- about section -->
     <section class="about" id=""about>
         <div class="max-width">
@@ -45,8 +59,8 @@
                 </div>
                 <div class="column right">'
                     <div class="text">I'm Ritesh and I'm a <span>Software Developer</span></div>
-                    <p>A Computer Science Graduate looking forward to start a career as Software Developer in a technology driven company. Most of the projects I have worked on are done in Java language. In college, I have studied multiple programming languages but I found Java much more suitable. Right now, I know I lack in many skills but I try my best to keep myself updated with new technologies. Apart from this, in my free time I love solving coding problems in Leetcode, GeeksForGeeks and Hackerank.</p>
-                    <a href="#">Download CV</a>
+                    <p>An aspiring frontend developer with a strong foundation in AEM (Adobe Experience Manager) 6.5, Java backend development, and experience using Azure DevOps for ticket management and version control. Eager to transition into frontend development using HTML, CSS, JavaScript, and React to create visually appealing and user-friendly interfaces.</p>
+                    <a href="resume.pdf">Download CV</a>
                 </div>
             </div>
         </div>
@@ -58,7 +72,8 @@
             <div class="skills-content">
                 <div class="column left">
                     <div class="text">My Technical Skills & Experiences</div>
-                    <p>I have done my first internship in a startup company called <b>Insyssky Softtech Pvt. Ltd.</b> as <b>Web | Graphics Designer</b>. We developed a Team portfolio website called <b>'InterKnow'</b> and an ERP Management website <b>'ManagERP'</b>. We used HTML5, CSS, JavaScript and Bootstrap for front-end and NodeJS as backend along with MongoDB for Database. My second internship was in <b>AspireVision Edutech Pvt. Ltd.</b> as an <b>Android Developer Trainee</b>. Developed a fully functional Chatting App. The whole backend was done in Java and Google Firebase is used for realtime database and for login/signup authorization.</p>
+                    <p>In this 1 year of experience I have extensively used AEM  in my project ensuring seamless content management and personalized user experiences. I also utilized Azure DevOps for effective ticket management and streamlined code deployment processes.<br>Now, I am proactively expanding my knowledge of frontend technologies and best practices. I am dedicated to mastering HTML, CSS, JavaScript, and React to create responsive and dynamic web applications. Through self-guided learning and hands-on projects, I am building a solid foundation in frontend development and staying updated with industry trends.
+                        </p>
                 </div>
                 <div class="column right">
                     <div class="bars">
@@ -70,36 +85,36 @@
                     </div>
                     <div class="bars">
                         <div class="info">
-                            <span>DSA</span>
-                            <span>75%</span>
+                            <span>AEM</span>
+                            <span>60%</span>
                         </div>
                         <div class="line dsa"></div>
                     </div>
-                    <div class="bars">
+                    <!-- <div class="bars">
                         <div class="info">
-                            <span>Android</span>
-                            <span>65%</span>
+                            <span>HTML, CSS</span>
+                            <span>70%</span>
                         </div>
                         <div class="line android"></div>
-                    </div>
+                    </div> -->
                     <div class="bars">
                         <div class="info">
-                            <span>Oracle SQL</span>
-                            <span>70%</span>
+                            <span>JavaScript</span>
+                            <span>65%</span>
                         </div>
                         <div class="line oracle"></div>
                     </div>
                     <div class="bars">
                         <div class="info">
                             <span>HTML</span>
-                            <span>60%</span>
+                            <span>70%</span>
                         </div>
                         <div class="line html"></div>
                     </div>
                     <div class="bars">
                         <div class="info">
                             <span>CSS</span>
-                            <span>50%</span>
+                            <span>70%</span>
                         </div>
                         <div class="line css"></div>
                     </div>
@@ -114,7 +129,7 @@
         <div class="contact-content">
             <div class="column left">
                 <div class="text">Get In Touch</div>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam adipisci, corrupti laboriosam beatae voluptates ullam soluta doloremque? Corrupti facilis, magnam quae cumque alias, doloribus doloremque non repellat minus, quas illum.</p>
+                <p>If you are seeking a motivated frontend developer with a strong technical background and a commitment to continuous learning, let's connect and discuss how we can work together to bring exceptional digital experiences to life.</p>
                 <div class="icons">
                     <div class="row">
                         <i class="fas fa-user"></i>
@@ -127,7 +142,7 @@
                         <i class="fas fa-map-marker-alt"></i>
                         <div class="info">
                             <div class="head">Address</div>
-                            <div class="sub-title">Agartala, Tripura</div>
+                            <div class="sub-title">Bengaluru, Karnataka</div>
                         </div>
                     </div>
                     <div class="row">
