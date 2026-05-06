@@ -1,73 +1,58 @@
-$(document).ready(function(){
-    $(window).scroll(function(){
-        // sticky navbar on scroll script
-        if(this.scrollY > 20){
+$(document).ready(function () {
+
+    // ── Sticky Navbar + Scroll Up Button ──
+    $(window).scroll(function () {
+        if (this.scrollY > 20) {
             $('.navbar').addClass("sticky");
-        }else{
+        } else {
             $('.navbar').removeClass("sticky");
         }
-        
-        // scroll-up button show/hide script
-        if(this.scrollY > 500){
+        if (this.scrollY > 500) {
             $('.scroll-up-btn').addClass("show");
-        }else{
+        } else {
             $('.scroll-up-btn').removeClass("show");
         }
     });
-    
-    // slide-up script
-    $('.scroll-up-btn').click(function(){
-        $('html').animate({scrollTop: 0});
-        // removing smooth scroll on slide-up button click
+
+    // ── Scroll Up ──
+    $('.scroll-up-btn').click(function () {
+        $('html').animate({ scrollTop: 0 });
         $('html').css("scrollBehavior", "auto");
     });
 
-    $('.navbar .menu li a').click(function(){
-        // applying again smooth scroll on menu items click
+    $('.navbar .menu li a').click(function () {
         $('html').css("scrollBehavior", "smooth");
     });
 
-    // toggle menu/navbar script
-    $('.menu-btn').click(function(){
+    // ── Mobile Menu Toggle ──
+    $('.menu-btn').click(function () {
         $('.navbar .menu').toggleClass("active");
         $('.menu-btn i').toggleClass("active");
     });
 
-    // typing text animation script
-    var typed = new Typed(".typing", {
-        strings: ["YouTuber", "Developer", "Blogger", "Designer", "Freelancer"],
-        typeSpeed: 100,
-        backSpeed: 60,
-        loop: true
-    });
+    // ── Dark / Light Mode Toggle ──
+    var savedTheme = localStorage.getItem('theme') || 'light-mode';
+    $('body').removeClass('light-mode dark-mode').addClass(savedTheme);
+    updateThemeIcon(savedTheme);
 
-    var typed = new Typed(".typing-2", {
-        strings: ["YouTuber", "Developer", "Blogger", "Designer", "Freelancer"],
-        typeSpeed: 100,
-        backSpeed: 60,
-        loop: true
-    });
-
-    // owl carousel script
-    $('.carousel').owlCarousel({
-        margin: 20,
-        loop: true,
-        autoplay: true,
-        autoplayTimeOut: 2000,
-        autoplayHoverPause: true,
-        responsive: {
-            0:{
-                items: 1,
-                nav: false
-            },
-            600:{
-                items: 2,
-                nav: false
-            },
-            1000:{
-                items: 3,
-                nav: false
-            }
+    $('#themeToggle').click(function () {
+        if ($('body').hasClass('light-mode')) {
+            $('body').removeClass('light-mode').addClass('dark-mode');
+            localStorage.setItem('theme', 'dark-mode');
+            updateThemeIcon('dark-mode');
+        } else {
+            $('body').removeClass('dark-mode').addClass('light-mode');
+            localStorage.setItem('theme', 'light-mode');
+            updateThemeIcon('light-mode');
         }
     });
+
+    function updateThemeIcon(theme) {
+        if (theme === 'dark-mode') {
+            $('#themeIcon').removeClass('fa-moon').addClass('fa-sun');
+        } else {
+            $('#themeIcon').removeClass('fa-sun').addClass('fa-moon');
+        }
+    }
+
 });
